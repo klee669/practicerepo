@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\firstpagefooter{}{Page \thepage\ of \numpages}{}
+%\runningfooter{}{Page \thepage\ of \numpages}{}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+Potential final exam questions with solutions:
+\end{center}
+
+\begin{enumerate}
+\item True or false: If $f(x)$ is discontinuous at $x=c$, then\\
+ $\displaystyle\lim_{x\to c^-}f(x)\neq\lim_{x\to c^+}f(x)$.\\
+ ~\\
+ Ans:  False.  A discontinuity can occur at a point $c$ where $\displaystyle\lim_{x\to c}f(x)$ exists (meaning $\displaystyle\lim_{x\to c^-}f(x)=\lim_{x\to c^+}f(x)=L$), so long as $f(c)\neq L$.
+
+\item Prof. X claims "If $f(x)$ is defined on the interval $[a,b]$ and is continuous on the interval $(a,b)$, then for every value $y$ between $f(a)$ and $f(b)$, there exists at least one point $c$ on $[a,b]$ such that $f(c)=y$."  Is Prof. X correct?  If so, explain why, citing any relevant theorems.  If not, illustrate a counterexample.\\
+~\\
+Ans: This is almost the statement of the Intermediate Value Theorem, but with one difference: $f$ is only said to be continuous on the open interval $(a,b)$ here, rather than the closed interval $[a,b]$.  So, Prof. X is incorrect. As one possible counterexample, consider a function that is increasing on $(a,b)$ and that has a single discontinuity at $a$ such that $f(a)>f(b)$.  In this case, none of the $y$ values between $f(a)$ and $f(b)$ will have a $c$ on $[a,b]$ where $f(c)=y$.
+
+\item Evaluate the following limits, or show why they do not exist:
+\begin{itemize}
+\item[(a)] $\displaystyle\lim_{x\to 0} \frac{\sin^2\left(|2 x|\right)}{x^2}$\\
+~\\
+Ans: Note $\sin^2(|2x|)=\sin^2(2x)$, multiply and divide by 4, and let $u=2x$, then this is just 4 times the limit of $\sin u/u$ as $u\to 0$ (which is 1) squared, giving a final answer of 4.
+\item[(b)] $\displaystyle\lim_{x\to -1} \frac{x^3-2x^2-3x}{x+1}$\\
+~\\
+Ans: Factor the numerator into $x(x+1)(x-3)$, cancel the factor of $(x+1)$ with that in the denominator, and simply plug in $x=-1$ to get final answer of 4.
+\item[(c)] $\displaystyle\lim_{\theta\to -\pi/2}\theta\tan^2\theta$\\
+~\\
+Ans: As $\theta\to-\pi/2$, $\tan\theta\to\pm\infty$, but since it is being squared here, that portion will simply approach $\infty$; when multiplied by the $-\pi/2$ coming from the $\theta$ term, you get a final answer of $-\infty$.
+\item[(d)] $\displaystyle\lim_{x\to -\infty} \frac{x+7}{\sqrt{x^2-4}}$\\
+~\\
+Ans:  The highest power of x in the numerator and denominator is 1, and the coefficients of each of these highest power terms are also 1.  However, note that the numerator will be negative here, while the denominator will be positive, so the final answer is $-1$.
+\end{itemize}
+
+
+\end{enumerate}
+
+
+\section{Hassan}
+
+{\bf True or False:} If $f$ is an odd and one-to-one function then $f^{-1}$ is an odd function.
+
+{\bf Ans:} True; Let $f$ be an odd function, and $y=f(x)$ then by help of the fact $-f(x)=f(-x)$ we obtain $f(-x)=-y$. So, $f^{-1}(y)=x$ and $f^{-1}(-y)=-x$, therefore, $f^{-1}(y)=-f^{-1}(-y)$ which means $f^{-1}$ is an odd function.
+
+\vspace{1cm}
+
+{\bf Short answer problem:} Let $f:[0,1]\longrightarrow[0,1]$ be a continuous function. Show that there exists a point $c\in[0,1]$ such that $f(c)=c$.
+
+{\bf Ans:} Define $g(x)=f(x)-x$, which is a continuous function on $[0,1]$. Since $0\leq f(x)\leq1$,
+$$g(0)=f(0)-0=f(0)\geq0,\ \ \ \ \ g(1)=f(1)-1\leq0$$
+By intermediate value theorem there exists a $c\in[0,1]$ such that $g(c)=0$ which implies $f(c)-c=0$ or $f(c)=c$.
+
+\vspace{1cm}
+
+{\bf Long answer problem:} Given the functions $f(x)=\frac{1}{x^2}$ and $g(x)=\frac{\sqrt{x+1}}{x}$, determine:\par
+(a) The domain and range of $f(x)$,\par
+(b) Inverse of $f$ over the interval $(-\infty,0)$,\par
+(c) The domain of $g(x)$,\par
+(d) The formula for $(f\circ g)(x)$,\par
+(e) The domain of $(f\circ g)$,\par
+(f) All asymptotes of $(f\circ g)$,\par
+
+{\bf Ans:} (a) $f$ is defined every where except the origin, so $D_f=(-\infty,0)\cup(0,\infty)$. It is obvious $f$ is a positive value function and for any positive and non-zero value of $y$ if we put $x=1/\sqrt{y}$ then $f(x)=y$, so, $R_f=(0,\infty)$.\par
+(b) Let $y=\frac{1}{x^2}$ then,
+$$x^2=\frac{1}{y} \Longrightarrow x=\pm\frac{1}{\sqrt{y}}$$
+Since $x\in(-\infty,0)$ we have $x=f^{-1}(y)=-\frac{1}{\sqrt{y}}$. (or $f^{-1}(x)=-\frac{1}{\sqrt{x}}$)\par
+(c) Function $g(x)$ is defined whenever $x+1\geq0$ and $x\neq0$. These imply $D_g=[-1,0)\cup(0,\infty)$.\par
+(d) $(f\circ g)(x)=f(g(x))=\frac{1}{(g(x))^2}=\frac{1}{(\sqrt{x+1}/x)^2}=\frac{x^2}{x+1}$.\par
+(e) Domain of $(f\circ g)$ is a subset of $D_g$ in part (c). Since $g(x)$ is zero at $x=-1$ and $f(x)$ is not defined at zero, we should remove $x=-1$ fram domain of $g$ to have $D_{(f\circ g)}$, that is $D_{(f\circ g)}=(-1,0)\cup(0,\infty)$.\par
+(f) As we see from part (d), $(f\circ g)$ has a vertical asymptote at $x=-1$ (root of its denominator). Moreover, the degree of numerator is one unit bigger than degree of denominator, therefore, it has oblique asymptote. Then,
+$$\frac{x^2}{x+1}=\frac{x^2-1+1}{x+1}=\frac{x^2-1}{x+1}+\frac{1}{x+1}=\frac{(x-1)(x+1)}{x+1}+\frac{1}{x+1}=x-1+\frac{1}{x+1}$$
+and $y=x-1$ is its oblique asymptote.
+
+
+
+\section{Kisun}
+
+{\bf True or False:} Let $f$ has the domain $[-2,2]$. If $f(-2)=-1$, $f(2)=1$ and the image of $f$ is $[-1,1]$, then $f$ is continuous on $[-2.2]$.
+
+{\bf Ans:} False; Let $f=\left\{\begin{array}{ll}
+x+1 & \text{ if }-2\leq x\leq 0\\
+x-1 & \text{ if } 0< x\leq 2
+\end{array}\right.$. Then, $f$ satisfies the conditions,  but $f$ is not continuous on $[-2,2]$.
+
+\vspace{1cm}
+
+{\bf Short answer problem:} Express $f(t)$ as a single sine function 
+\[f(t)=\frac{1}{\sqrt{2}}\cos t+\frac{1}{\sqrt{2}}\sin t.\]
+
+
+{\bf Ans:} Note that $\sin(\frac{\pi}{4})=\cos(\frac{\pi}{4})=\frac{1}{\sqrt{2}}$. Then, by addition formular, we have $f(t)=\sin(\frac{\pi}{4})\cos t+\cos(\frac{\pi}{4})\sin t=\sin (t+\frac{\pi}{4})$.
+
+\vspace{1cm}
+
+{\bf Long answer problem:} Determine the domain and the range of the following functions:
+\begin{enumerate}
+	\item $f(x)=\sqrt{16-x^2}+2$
+	\item $g(x)=x^2-6x+7$
+\end{enumerate}
+
+Evaluate the following limits.
+\begin{enumerate}
+	\item[3.] $\lim\limits_{x\rightarrow 0}\frac{\cos x -1}{x^2}$ (\textbf{Hint :} Use the half angle formula)
+	\item[4.] $\lim\limits_{x\rightarrow 0}x^3\sin(\frac{1}{3x^3})$
+\end{enumerate}
+{\bf Ans:} 1. Since $f$ has an even root, we need to have $16-x^2\geq 0$, and so, $-4\leq x\leq 4$ is the domain of $f$. From the graph of $f(x)$, it has an upper circle with radius $4$. Therefore, $f(x)$ has the range $[2,6]$.\\
+
+
+2. Use the complete square, then $g(x)=(x-3)^2-2$. Since $g(x)$ is a polynomial, it has the domain $(-\infty,\infty)$. Also, from the complete square, we have the minimum of $g$ at $(3,-2)$. Hence, the range of $g(x)$ is $[-2,\infty]$.\\
+
+
+On the other hand, we can get $g'(x)=2x-6$, and find out that $g(x)$ has the local minimum at $x=3$ from the first derivative test. Then, we can get the range $[-2,\infty]$ because $f(3)=-2$.\\
+
+
+3. \begin{eqnarray*}
+\lim\limits_{x\rightarrow 0}\frac{\cos x-1}{x^2} & = & \lim\limits_{x\rightarrow 0}\frac{-2\sin^2(\frac{x}{2})}{x^2}\\
+&=& -\frac{1}{2}
+\end{eqnarray*}
+
+
+4. Use the sandwich Theorem. Then, since $$-x^3\leq x^3\sin(\frac{1}{3x^2})\leq x^3,$$
+and $\lim\limits_{x\rightarrow 0}x^3=0$, we have $\lim\limits_{x\rightarrow 0}x^3\sin(\frac{1}{3x^2})=0$.
+
+\end{document}
